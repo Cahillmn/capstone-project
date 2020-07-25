@@ -6,10 +6,10 @@
   <div class="messages">
       <message-container v-bind:messages="messages"></message-container>
     </div>
-    <div class="characters-search">
-      <form v-on:submit.prevent="findCharacters">
+    <div class="breed-search">
+      <form v-on:submit.prevent="findBreed">
        <p>
-       <label for="breed">Pick a Character: 
+       <label for="breed">Pick a Breed: 
             <select id="breed" v-model="breed">
               <option value="">Select Breed</option>
               <option>https://dog.ceo/api/breed/hound/images/random/10</option>
@@ -93,7 +93,7 @@ export default {
     })
   },*/
   methods: {
-    findBreeds: function() {
+    findBreed: function() {
       this.showSpinner = true;
       this.results = null;
         axios.get('https://dog.ceo/api/breed/"+dogURL+"/images/random/10', {
