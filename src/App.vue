@@ -12,7 +12,7 @@
     </header>
     <banner>
       <a href="index.html">
-        <img src="./assets/Banner.jpg" alt="Logo" />
+        <img src="./assets/Banner.jpg" alt="Logo">
       </a>
     </banner>
     

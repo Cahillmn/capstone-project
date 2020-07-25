@@ -77,9 +77,8 @@ export default {
     return {
       results: null,
       wordList: [],
-      messages: [],
-      url: '',
-      image: [],
+      message: [],
+      status: '',
       showSpinner: false,
       apiKey:'26f70159-b7e5-43fd-bb7a-a7669a0072f8'
     }
@@ -96,9 +95,9 @@ export default {
     findBreed: function() {
       this.showSpinner = true;
       this.results = null;
-        axios.get('https://dog.ceo/api/breed/"+dogURL+"/images/random/10', {
+        axios.get('https://dog.ceo/api/breed/+{{breed}}+/images/random/10', {
         params: {
-          name: this.name,
+          breed: this.breed,
         }
       })
       .then( response => {

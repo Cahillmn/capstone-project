@@ -1,17 +1,17 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Fido from '@/views/Fido'
+import breed from '@/views/breed'
 import CubeSpinner from '@/components/CubeSpinner'
 Vue.use(VueRouter)
   const routes = [
   {
     path: '/',
-    name: 'Breeds',
-    component: Fido
+    name: 'breed',
+    component: breed
   },
   
   {
-    path: '/:url/house',
+     path: '/:url/Fido',
     name: 'CubeSpinner',
     component: CubeSpinner
   }
