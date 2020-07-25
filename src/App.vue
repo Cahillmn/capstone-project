@@ -1,12 +1,23 @@
+
 <template>
+<body class="home">
   <div id="app">
+    
     <header>
-      <a href="index.html">
-        <img src="./assets/banner.jpg" alt="Logo" />
-      </a>
+      <div class='container' id='nav'>
+      <!-- <img class="left" src="./assets/left-icon.png" alt="Corgi icon"> -->
+      <h1 class='headline'>Fido Finder</h1>
+      <!-- <img class="right" src="./assets/right-icon.png" alt="Corgi icon"> -->
+    </div>
     </header>
-    <h1>Dog Breeds</h1>
-    <h2>What's a dog breed?</h2>
+    <banner>
+      <a href="index.html">
+        <img src="./assets/Banner.jpg" alt="Logo" />
+      </a>
+    </banner>
+    
+    <h2>Dog Breeds</h2>
+    <h3>What is a dog breed?</h3>
 
     <p>
       People have been breeding dogs since prehistoric times. The earliest dog breeders used wolves to create domestic dogs. From the beginning, humans purposefully bred dogs to perform various tasks. Hunting, guarding, and herding are thought to be among the earliest jobs eagerly performed by the animal destined to be called “man’s best friend.”</p>
@@ -17,10 +28,10 @@
       <p>The AKC standard for each breed originates with a “parent club,” the AKC-recognized national club devoted to a particular breed. Once approved by the AKC, a standard becomes both the breeder’s “blueprint” and the instrument used by dog show judges to evaluate a breeder’s work.</p>
       <p>There are over 340 dog breeds known throughout the world. The American Kennel Club recognizes 193 breeds.</p>
     
-    <img alt="GOT Logo" src="./assets/logo.png" />
-    <h1>Game of Thrones Character Search</h1>
+    
     <router-view />
   </div>
+  </body>
 </template>
 
 <script>
@@ -30,7 +41,13 @@ export default {
 </script>
 
 <style>
+*{
+    padding:0;
+    margin:0;
+}
 #app {
+  width:940px;
+  margin: 20px auto;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -39,7 +56,29 @@ export default {
   margin-top: 60px;
 }
 
+body {
+  background-color:blue;
+}
+
+#app{
+  background-color: white;
+}
+
+header {
+  margin-bottom: 50px;
+}
+
 p {
   text-align:left;
+  margin-bottom: 20px;
+  font-size: 1.4em;
+}
+
+.left {
+  float:left;
+}
+
+.right {
+  float:right;
 }
 </style>
