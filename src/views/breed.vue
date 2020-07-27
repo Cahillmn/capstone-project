@@ -50,6 +50,12 @@
       
        <ul v-if="results && results.length > 0" class="results">
         <transition-group name="fade" tag="div" appear>
+          <li v-for="(result,index) in results" class="breed" :key="index">
+            <img v-bind:src="results.message">
+
+
+          </li>
+
         
         </transition-group>
       </ul> 
@@ -76,7 +82,7 @@ export default {
   data () {
     return {
       results: null,
-      wordList: [],
+      // wordList: [],
       message: [],
       status: '',
       showSpinner: false,
