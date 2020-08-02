@@ -10,11 +10,11 @@
       <!-- <img class="right" src="./assets/right-icon.png" alt="Corgi icon"> -->
     </div>
     </header>
-    <banner>
+    <div>
       <a href="index.html">
         <img src="./assets/Banner.jpg" alt="Logo">
       </a>
-    </banner>
+    </div>
     
     <h2>Dog Breeds</h2>
     <h3>What is a dog breed?</h3>
@@ -40,24 +40,20 @@ export default {
     padding:0;
     margin:0;
 }
+body{
+  background:yellow;
+}
 #app {
   width:940px;
-  margin: 20px auto;
+  margin: 150px auto 0 auto;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; 
   text-align: center;
-  color: #2c3e50;
   margin-top: 60px;
-}
-
-body {
-  background-color:blue;
-}
-
-#app{
   background-color: white;
 }
+
 
 header {
   margin-bottom: 50px;
