@@ -12,10 +12,11 @@
           <select id="breed" v-model="breed">
             <option v-for="item in breedli" v-bind:value="item.val" :key="item.val">{{item.dog}}</option>
           </select>
+          <button type="submit">Search</button>
         </p>
 
         <p>
-          <button type="submit">Search</button>
+          
         </p>
       </form>
     </div>
@@ -86,14 +87,7 @@ export default {
       apiKey: "26f70159-b7e5-43fd-bb7a-a7669a0072f8",
     };
   },
-  /*fetchImages () {
-    return axios({
-      method: 'get',
-      url: 'https://dog.ceo/api/breed/hound/images/random/10',
-      params: [],
-      showSpinner: false
-    })
-  },*/
+
   methods: {
     findBreed: function () {
       this.showSpinner = true;
@@ -123,12 +117,13 @@ export default {
 <style scoped>
 button {
   background: #333;
-  padding: 0.5rem;
+  padding: .5rem;
+  margin-left:10px;
   font-weight: 300;
   color: #fff;
   border: none;
   cursor: pointer;
-  font-size: 1.4rem;
+  font-size: 1.0rem;
   border-radius: 0;
 }
 
@@ -159,6 +154,17 @@ a {
   color: white;
 }
 img {
-   width:100%; 
+   width:30%; 
+
 }
+
+.no-results {
+  padding-bottom: 20px;
+}
+
+.no-results p{
+  text-align: center;
+}
+
+
 </style>

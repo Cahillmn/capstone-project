@@ -10,11 +10,13 @@
       <!-- <img class="right" src="./assets/right-icon.png" alt="Corgi icon"> -->
     </div>
     </header>
+
     <div>
       <a href="index.html">
         <img src="./assets/Banner.jpg" alt="Logo">
       </a>
     </div>
+    
     
     <h2>Dog Breeds</h2>
     <h3>What is a dog breed?</h3>
@@ -24,8 +26,10 @@
       <p>For thousands of years, humans bred dogs toward the physical and mental traits best suited for the work expected of them. The sleek Greyhound types bred to chase fleet-footed prey, and the huge mastiff types used as guard dogs and warriors, are two ancient examples of dogs bred for specific jobs.</p>
       <p>As humans became more sophisticated, so did their dogs. Eventually, there emerged specific breeds of dogs, custom-bred to suit the breeders’ local needs and circumstances. The Greyhound, for instance, was the foundation type for the immense Irish Wolfhound and the dainty Italian Greyhound. All three have a distinct family resemblance, but you’d never mistake one for another.</p>
     
+    
     <router-view />
-  </div>
+
+  </div> <!--closing app div -->
   </body>
 </template>
 
@@ -41,22 +45,30 @@ export default {
     margin:0;
 }
 body{
-  background:yellow;
-}
+            
+            background-image:url(./assets/paws.jpeg);
+            background-attachment: fixed;
+            font-family:verdana, helvitica, sans-serif;
+            font-size:100%;
+        }
+
 #app {
   width:940px;
   margin: 150px auto 0 auto;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; 
+  font-family: Avenir, Helvetica, Arial, sans-serif; 
   text-align: center;
   margin-top: 60px;
-  background-color: white;
+  background-color: rgb(225, 239, 243);
+}
+
+#app p {
+  padding:0px 20px;
 }
 
 
 header {
   margin-bottom: 50px;
+  padding-top: 30px;
 }
 
 p {
