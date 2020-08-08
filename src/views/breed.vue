@@ -8,18 +8,18 @@
     <div class="breed-search">
       <form v-on:submit.prevent="findBreed">
         <p>
-          <label for="breed">Pick a Breed:</label>
-          <select id="breed" v-model="breed">
+          <label for="breed">To find pictures of your favorite, pick a breed:</label>
+          <select id="breed" class="select" v-model="breed">
             <option v-for="item in breedli" v-bind:value="item.val" :key="item.val">{{item.dog}}</option>
           </select>
           <button type="submit">Search</button>
         </p>
 
-        <p>
-          
-        </p>
       </form>
+
     </div>
+
+    
     <!--<div class="breed-search">
       <form v-on:submit.prevent="getBreed">
       <p>
@@ -51,12 +51,21 @@
           </transition-group>
         </ul>
       </div>
-      <div v-else class="no-results">
+      <!-- <div v-else class="no-results">
         <h2>No Pictures Found</h2>
         <p>Please adjust your search.</p>
-      </div>
+      </div> -->
     </div>
+    <footer> 
+
+      <ul>
+        <li>Images from Dog API</li>
+        <li>Text from AKC.org</li>
+      </ul> 
+
+    </footer>
   </div>
+  
 </template>
 
 <script>
@@ -76,9 +85,21 @@ export default {
       // wordList: [],
       breed: "",
       breedli: [
+        { val: "affenpinscher", dog: "Affenpinscher"},
+        { val: "airedale", dog: "Airdale"},
+        { val: "akita", dog: "Akita"},
+        { val: "australian", dog: "Australian Shepherd"},
+        { val: "basenji", dog: "Basenji"},
+        { val: "frise", dog: "Bichon Frise"},
+        { val: "corgi", dog: "Cardigan Welsh Corgi"},
+        { val: "pembroke", dog: "Pembroke Welsh Corgi"},
         { val: "pug", dog: "Pug" },
+        { val: "chihuahua", dog: "Chihuahua"},
+        { val: "corgi", dog: "Cardigan Welsh Corgi"},
+        { val: "terrier", dog: "Terriers"},
+        { val: "retriever", dog: "Retrievers"},
         { val: "pekinese", dog: "Pekinese" },
-        { val: "australian", dog: "Australian Shepherd"}
+        
       ],
       url: "",
       messages: [],
@@ -93,7 +114,7 @@ export default {
       this.showSpinner = true;
       this.results = null;
       this.url =
-        "https://dog.ceo/api/breed/" + this.breed + "/images/random/10";
+        "https://dog.ceo/api/breed/" + this.breed + "/images/random/12";
       axios({
         url: this.url,
         method: "get",
@@ -115,6 +136,11 @@ export default {
 </script>
 
 <style scoped>
+*{
+    padding:0;
+    margin:0;
+}
+
 button {
   background: #333;
   padding: .5rem;
@@ -133,7 +159,14 @@ h2 {
   text-align: center;
 }
 
-.results li {
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 25px 20px;
+}
+
+/* .results li {
   text-align: left;
   display: inline-block;
   margin: 10px;
@@ -145,7 +178,7 @@ h2 {
   font-weight: 300;
   font-size: 1.2rem;
   background: black;
-}
+} */
 .link {
   text-align: center;
 }
@@ -154,16 +187,51 @@ a {
   color: white;
 }
 img {
-   width:30%; 
+    float: left;
+     width:300px;
+     height:300px;
+     /* max-width: 100%; */
+     /* max-height: 100%; */
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display:block;
+    background-color: rgb(225, 239, 243);
+}
 
+.select {
+  margin-left: 20px;
+}
+.results {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.results li:nth-child(3), 
+.results li:nth-child(6),
+.results li:nth-child(9),
+.results li:nth-child(12) {
+    margin-right: 0;
+   
+    
 }
 
 .no-results {
   padding-bottom: 20px;
 }
 
-.no-results p{
-  text-align: center;
+footer {
+    padding-top: 10px;
+    margin-top: 20px;
+    height: 50px;
+    line-height: 50px;
+    clear:both;
+    border-top:1px solid #aaa;
+}
+
+footer li {
+    float:left;
+    list-style-type:none;
+    margin-left: 225px;
+    font-style: italic;
 }
 
 

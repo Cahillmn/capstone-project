@@ -13,7 +13,7 @@
 
     <div>
       <a href="index.html">
-        <img src="./assets/Banner.jpg" alt="Logo">
+        <img class="banner" src="./assets/Banner.jpg" alt="Logo">
       </a>
     </div>
     
@@ -23,8 +23,8 @@
 
     <p>
       People have been breeding dogs since prehistoric times. The earliest dog breeders used wolves to create domestic dogs. From the beginning, humans purposefully bred dogs to perform various tasks. Hunting, guarding, and herding are thought to be among the earliest jobs eagerly performed by the animal destined to be called “man’s best friend.”</p>
-      <p>For thousands of years, humans bred dogs toward the physical and mental traits best suited for the work expected of them. The sleek Greyhound types bred to chase fleet-footed prey, and the huge mastiff types used as guard dogs and warriors, are two ancient examples of dogs bred for specific jobs.</p>
-      <p>As humans became more sophisticated, so did their dogs. Eventually, there emerged specific breeds of dogs, custom-bred to suit the breeders’ local needs and circumstances. The Greyhound, for instance, was the foundation type for the immense Irish Wolfhound and the dainty Italian Greyhound. All three have a distinct family resemblance, but you’d never mistake one for another.</p>
+      
+      <p>Eventually, there emerged specific breeds of dogs, custom-bred to suit the breeders’ local needs and circumstances. The Greyhound, for instance, was the foundation type for the immense Irish Wolfhound and the dainty Italian Greyhound. All three have a distinct family resemblance, but you’d never mistake one for another.</p>
     
     
     <router-view />
@@ -53,11 +53,12 @@ body{
         }
 
 #app {
-  width:940px;
+  width:980px;
   margin: 150px auto 0 auto;
   font-family: Avenir, Helvetica, Arial, sans-serif; 
   text-align: center;
   margin-top: 60px;
+  overflow:hidden;
   background-color: rgb(225, 239, 243);
 }
 
@@ -67,8 +68,17 @@ body{
 
 
 header {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   padding-top: 30px;
+}
+
+h2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+h3 {
+  padding-bottom: 10px;
 }
 
 p {
@@ -76,6 +86,8 @@ p {
   margin-bottom: 20px;
   font-size: 1.4em;
 }
+
+
 
 .left {
   float:left;
