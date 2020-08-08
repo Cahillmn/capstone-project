@@ -5,9 +5,9 @@
     
     <header>
       <div class='container' id='nav'>
-      <!-- <img class="left" src="./assets/left-icon.png" alt="Corgi icon"> -->
+      
       <h1 class='headline'>Fido Finder</h1>
-      <!-- <img class="right" src="./assets/right-icon.png" alt="Corgi icon"> -->
+      
     </div>
     </header>
 

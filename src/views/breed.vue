@@ -20,28 +20,13 @@
     </div>
 
     
-    <!--<div class="breed-search">
-      <form v-on:submit.prevent="getBreed">
-      <p>
-       <label for="breed">Select a Breed:
-         <select id="breed" v-model="breed">
-         <input type="text" v-model="query" placeholder="Pug" />
-        <button type="submit">Search</button>
-        </select>
-        </label>
-      </p>
-    </form> 
-
-     <img v-bind:src="'http://openweathermap.org/img/w/' + weatherSummary.icon + '.png'" v-bind:alt="weatherSummary.main"> 
-    
-    </div>-->
     <div class="result-list-container"></div>
 
     <!-- This section defines results that should be returned based on the search -->
     <div class="results-container">
       <spinner v-if="showSpinner"></spinner>
       <div v-if="results && results.length > 0">
-        <h2>{{ results.length }} Results</h2>
+        <h2 class="number">{{ results.length }} Results</h2>
 
         <ul class="results">
           <transition-group name="fade" tag="div" appear>
@@ -51,10 +36,7 @@
           </transition-group>
         </ul>
       </div>
-      <!-- <div v-else class="no-results">
-        <h2>No Pictures Found</h2>
-        <p>Please adjust your search.</p>
-      </div> -->
+      
     </div>
     <footer> 
 
@@ -159,6 +141,10 @@ h2 {
   text-align: center;
 }
 
+.number {
+  padding-top: 20px;
+}
+
 .container {
     max-width: 1200px;
     width: 100%;
@@ -166,19 +152,6 @@ h2 {
     padding: 25px 20px;
 }
 
-/* .results li {
-  text-align: left;
-  display: inline-block;
-  margin: 10px;
-  border: solid 1px #333;
-  padding: 0.5rem;
-  width: 300px;
-  min-height: 150px;
-  color: gold;
-  font-weight: 300;
-  font-size: 1.2rem;
-  background: black;
-} */
 .link {
   text-align: center;
 }
@@ -188,10 +161,8 @@ a {
 }
 img {
     float: left;
-     width:300px;
-     height:300px;
-     /* max-width: 100%; */
-     /* max-height: 100%; */
+    width:300px;
+    height:300px;
     margin-right: 20px;
     margin-bottom: 20px;
     display:block;
