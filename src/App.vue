@@ -44,6 +44,16 @@ export default {
     padding:0;
     margin:0;
 }
+
+@font-face {
+    font-family: 'architects_daughterregular';
+    src: url('../fonts/architectsdaughter-webfont.woff2') format('woff2'),
+         url('../fonts/architectsdaughter-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body{
             
             background-image:url(./assets/paws.jpeg);
@@ -72,7 +82,15 @@ header {
   padding-top: 30px;
 }
 
+h1 {
+
+    text-decoration: none;
+    font-family: 'architects_daughterregular';
+}
+
+
 h2 {
+
   padding-top: 10px;
   padding-bottom: 10px;
 }
