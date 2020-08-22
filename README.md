@@ -1,5 +1,5 @@
 ##################################################
-# wats4000-final-project
+# wats4030-capstone-project
 
 Fido Finder
 Created by: Meghan Cahill
