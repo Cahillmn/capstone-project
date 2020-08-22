@@ -174,6 +174,7 @@ export default {
   },
 
   methods: {
+    
     findBreed: function () {
       this.showSpinner = true;
       this.results = null;
@@ -194,6 +195,7 @@ export default {
             text: error.message,
           });
         });
+        
     },
   },
 };
